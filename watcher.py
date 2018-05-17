@@ -26,6 +26,7 @@ class Watcher:
 
 class Handler(FileSystemEventHandler):
 
+
     @staticmethod
     def process(self, event):
         """
@@ -34,10 +35,12 @@ class Handler(FileSystemEventHandler):
         """
         print(event.src_path, event.event_type)
 
-    def on_modified(self, event):
-        self.process(self,event)
+    # def on_modified(self, event):
+    #     self.process(self,event)
 
     def on_created(self, event):
+        with open("watcher-log.txt", 'a') as logfile:
+            logfile.write(event.src_path + " " + event.event_type + "\n")
         self.process(self,event)
 
     def on_deleted(self, event):

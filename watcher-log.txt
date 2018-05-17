@@ -1,0 +1,2 @@
+/media/rohit/New Volume/PROJECTS/File-Watcher/watch_this_directory/a.txt created
+/media/rohit/New Volume/PROJECTS/File-Watcher/watch_this_directory/a1.txt created
